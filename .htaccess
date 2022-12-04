@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /log.php [L]
+<Files ~ "^\.ht|.con|log.php">
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</Files>
